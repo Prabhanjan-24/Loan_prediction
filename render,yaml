@@ -1,22 +1,9 @@
+previewsEnabled: true
 services:
-  # A Docker web service
   - type: web
-    name: loan_prediction
-    runtime: docker
-    repo: https://github.com/ksl1221/loan_prediction.git
-    rootDir: loan_prediction
-    healthCheckPath: /
+    plan: Individual
+    name: app
+    env: python
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.5
-      - key: REDIS_HOST
-        fromService:
-          type: redis
-          name: lightning
-          property: host # available properties are listed below
-      - key: REDIS_PORT
-        fromService:
-          type: redis
-          name: lightning
-          property: port
-      - fromGroup: conc-settings
