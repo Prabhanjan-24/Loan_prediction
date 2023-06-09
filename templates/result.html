@@ -20,10 +20,9 @@
     <br>
     <br>
     {% if pred ==1 %}
-    <img src="{{url_for('static',filename = 'Approved-Circle-Logo-Transparent-PNG.png')}}" alt="approved.png" width="300"
-        height="300">
+    <h2>Your loan has been <b>APPROVED</b>. Congratulations!</h2>
     {% else %}
-    <img src="{{url_for('static',filename = 'pngwing.com.png')}}" alt="declined.png" width="300" height="300">
+    <h2>Unfortunately, your loan application has been <b>DECLINED!</b></h2>
     {% endif %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
